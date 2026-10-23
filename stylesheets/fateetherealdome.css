@@ -150,16 +150,6 @@ html {
                     padding: 0;
                     counter-reset: fruity-item;
 
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        top: .9rem;
-                        bottom: .9rem;
-                        left: .9rem;
-                        width: 1px;
-                        background: var(--accent5);
-                    }
-
                     li {
                         position: relative;
                         min-height: 1.8rem;
@@ -181,6 +171,17 @@ html {
                             font-family: 'Playfair Display', serif;
                             font-size: 10px;
                             font-weight: 700;
+                        }
+
+                        &:not(:last-child)::after {
+                            content: "";
+                            position: absolute;
+                            top: 17px;
+                            bottom: .9rem;
+                            left: .9rem;
+                            width: 1px;
+                            background: var(--accent5);
+                            height: calc(100% + 8px);
                         }
                     }
                 }
